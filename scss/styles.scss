@@ -10,10 +10,22 @@ body {
 }
 
 button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: $darkblue;
   color: $cream;
   width: 200px;
   margin: 10px;
+  text-align: center;
+}
+
+input[type="text"] {
+  background: $lightblue;
+  border: 2px solid $darkblue;
+  text-align: center;
+  color: $darkblue;
+  margin-bottom: 10px;
 }
 
 .container {

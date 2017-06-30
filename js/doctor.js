@@ -30,7 +30,7 @@ Doctor.prototype.getDoctors = function(medicalIssue) {
         } else {
         doctors.forEach(function(doctor) {
           $('#doctorList').append(
-            "<div class='info'><h3>" + doctor.first + " " + doctor.last + ", " +doctor.title + "</h3><p class='gender'>" + doctor.gender + "</p><p>" + doctor.bio + "</p><hr></div>"
+            "<div class='info'><h3>" + doctor.first + " " + doctor.last + ", " + doctor.title + "</h3><p class='gender'>" + doctor.gender + "</p><p>" + doctor.bio + "</p><hr></div>"
           );
         });
       }
