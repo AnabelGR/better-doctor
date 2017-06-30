@@ -13,16 +13,8 @@ Doctor.prototype.getDoctors = function(medicalIssue) {
         doctors.push( {
           first: doc.profile.first_name,
           last: doc.profile.last_name,
-          title: doc.profile.title,
           bio: doc.profile.bio
         });
-      });
-      doctors.forEach(function(doc) {
-        if (doc.title != undefined) {
-          doc.title = doc.title;
-        } else {
-          doc.title = "There is no title in the database.";
-        }
       });
       doctors.forEach(function(doc) {
         if (doc.bio != "") {
@@ -36,7 +28,7 @@ Doctor.prototype.getDoctors = function(medicalIssue) {
       } else {
         doctors.forEach(function(doc) {
           $('#doctorList').append(
-            "<li class='info'><h3 class='doctor'>" + doc.first + " " + doc.last + ", " + doc.title + "</h3><p>" + doc.gender + "</p><p>" + doc.bio + "</p></li>"
+            "<li class='info'><h3 class='doctor'>" + doc.first + " " + doc.last + "</h3><p>" + doc.bio + "</p></li><hr>"
           );
         });
       }

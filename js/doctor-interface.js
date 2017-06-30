@@ -13,7 +13,7 @@ $(document).ready(function() {
   });
   $('#clear').click(function(event) {
     event.preventDefault();
-    $('ul').empty();
+    $('#doctorList').empty();
     $('#search').show();
     $('#clear').hide();
   });

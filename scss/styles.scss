@@ -1,0 +1,70 @@
+$black : #000000;
+$darkblue : #153243;
+$gray : #475B63;
+$lightblue : #A1B5D8;
+$cream : #EBF5EE;
+
+body {
+  background: $lightblue;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+button {
+  background: $darkblue;
+  color: $cream;
+  width: 200px;
+  margin: 10px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 16px;
+  color: $darkblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctorList {
+  display: flex;
+  margin-top: 20px;
+  border: 1px solid $darkblue;
+  border-radius: 15px;
+  background: $cream;
+  padding: 50px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $darkblue;
+  background-image: image('./../img/stethoscope1.jpg');
+  height: 200px;
+  width: 1200px;
+  padding: 20px;
+}
+.subhead {
+  font-family: 'Ubuntu', sans-serif;
+  color: $cream;
+}
+
+.user-interface {
+  margin-top: 20px;
+}
+
+#header {  text-align: center;
+  font-family: 'Yellowtail', cursive;
+  font-size: 60px;
+  color: $lightblue;
+}

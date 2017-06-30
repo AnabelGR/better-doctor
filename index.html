@@ -2,27 +2,27 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Yellowtail" rel="stylesheet">
     <meta charset="utf-8">
     <title>gesundheit</title>
   </head>
   <body>
     <div class="container">
     <div class="header">
-      <h1>aachooooo!</h1>
+      <h1 id="header">aaAA-chooo!</h1>
+      <h3 class="subhead">Look for a doctor based on your symtoms.</h3>
     </div>
-    <div id="ui-field">
+    <div class="user-interface">
       <div id="search">
-        <input class="form-control" id="medicalIssue" type="text" placeholder="a rash? heart pain? broken bone?">
+        <input class="form-control" id="medicalIssue" type="text" placeholder="A cold? Heart pain? Broken bone?">
         <button class="btn" id="find">FIND AREA DOCTORS</button>
       </div>
-      <button class="btn" id="clear">CLEAR DOCTORS</button>
+      <button class="btn" id="clear">CLEAR SEARCH</button>
     </div>
-    <div id="results">
-      <ul id="doctorList">
-      </ul>
+    <div id="doctorList">
     </div>
   </div>
       <div class="footer">
