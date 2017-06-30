@@ -1,8 +1,9 @@
+#Planning Notes
 ## Configuration/dependencies
 1. Create a {.gitignore_global} file on the top directory with the following file names to ignore for all OS generated and Modern Javascript files:
   - .DS_Store
   - .DS_Store?
-  <!-- - ._\* -->
+  - ._\*
   - .Spotlight-V100
   - .Trashes
   - ehthumbs.db
@@ -46,7 +47,11 @@
   - bower install jquery --save
   - bower install bootstrap --save
 
-7. Write gulpfile.js document, requires the following variables and their associated tasks:
+7. Install sass packages
+  - gem install sass
+  - npm install gulp-sass gulp-sourcemaps --save-dev
+
+8. Write gulpfile.js document, requires the following variables and their associated tasks:
   - var gulp = require('gulp');
   - var concat = require('gulp-concat');
   - var browserify = require('browserify');
@@ -71,7 +76,7 @@
    }
   });
 
-8. API key needs to be downloaded from https://developer.betterdoctor.com/.
+9. API key needs to be downloaded from https://developer.betterdoctor.com/.
   - create an account for a free API key
   - open the .env file and type ' exports.apiKey = "{paste in your API key here}"; '
   - save the document and create the project
