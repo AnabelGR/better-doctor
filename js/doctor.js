@@ -9,26 +9,33 @@ Doctor.prototype.getDoctors = function(medicalIssue) {
   $('#doctorList').text("");
   $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ medicalIssue+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=10&user_key=' + apiKey)
     .then(function(result) {
-      result.data.forEach(function(doc) {
+      result.data.forEach(function(doctor) {
         doctors.push( {
-          first: doc.profile.first_name,
-          last: doc.profile.last_name,
-          bio: doc.profile.bio
+          first: doctor.profile.first_name,
+          last: doctor.profile.last_name,
+          title: doctor.profile.title,
+          bio: doctor.profile.bio,
+          address: doctor.practices.visit_address
         });
       });
-      doctors.forEach(function(doc) {
-        if (doc.bio != "") {
-          doc.bio = doc.bio;
+      doctors.forEach(function(doctor) {
+        if (doctor.bio != "") {
+          doctor.bio = doctor.bio;
         } else {
-          doc.bio = "There is no bio in the database.";
+          doctor.bio = "There is no data in the database.";
         }
-      });
-      if (doctors.length === 0) {
-        $('#doctorList').append("<p>Try different search criteria to widen your search.</p>");
-      } else {
-        doctors.forEach(function(doc) {
+        if (doctor.address != undefined) {
+          doctor.address = doctor.address;
+        } else {
+          doctor.address = "There is no address in the database.";
+        }
+        });
+        if (doctors.length === 0) {
+          $('#doctorList').append("<p>Try different search criteria to widen your search.</p>");
+        } else {
+        doctors.forEach(function(doctor) {
           $('#doctorList').append(
-            "<li class='info'><h3 class='doctor'>" + doc.first + " " + doc.last + "</h3><p>" + doc.bio + "</p></li><hr>"
+            "<div class='info'><h3>" + doctor.first + " " + doctor.last + ", " +doctor.title + "</h3><p>" + doctor.address + "</p><p>" + doctor.bio + "</p><hr></div>"
           );
         });
       }

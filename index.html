@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <title>gesundheit</title>
   </head>
-  <body class="site">
+  <body style="background-image: url(./img/stethoscope1.jpg); background-size: cover;">
     <div class="container">
     <div class="header">
       <h1 id="header">aaAA-chooo!</h1>
@@ -17,12 +17,16 @@
     </div>
     <div class="user-interface">
       <div id="search">
-        <input class="form-control" id="medicalIssue" type="text" placeholder="A cold? Heart pain? Broken bone?">
-        <button id="find">FIND AREA DOCTORS</button>
+        <input class="form-control" id="medicalIssue" type="text" placeholder="Heart pain? Broken bone?">
+        <button id="find">FIND DOCTORS</button>
       </div>
       <button id="clear">CLEAR SEARCH</button>
     </div>
     <div id="doctorList">
+      <div id="showDoctor">
+      </div>
+      <div id="showAll">
+      </div>
     </div>
     <div class="footer">
       <p>powered by <a href="https://betterdoctor.com"><p> <img src='./../img/betterdoctor-logo.png'>
