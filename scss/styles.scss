@@ -28,20 +28,13 @@ li {
   align-items: center;
 }
 
-.doctorList {
-  display: flex;
-  margin-top: 20px;
-  border: 1px solid $darkblue;
-  border-radius: 15px;
-  background: $cream;
-  padding: 50px;
-}
-
 .footer {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
+  height: 150px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .header {
@@ -54,6 +47,7 @@ li {
   width: 1200px;
   padding: 20px;
 }
+
 .subhead {
   font-family: 'Ubuntu', sans-serif;
   color: $cream;
@@ -64,7 +58,7 @@ li {
 }
 
 #header {  text-align: center;
-  font-family: 'Yellowtail', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 60px;
   color: $lightblue;
 }
