@@ -14,20 +14,15 @@ Doctor.prototype.getDoctors = function(medicalIssue) {
           first: doctor.profile.first_name,
           last: doctor.profile.last_name,
           title: doctor.profile.title,
-          bio: doctor.profile.bio,
-          address: doctor.practices.visit_address
+          gender: doctor.profile.gender,
+          bio: doctor.profile.bio
         });
       });
       doctors.forEach(function(doctor) {
         if (doctor.bio != "") {
           doctor.bio = doctor.bio;
         } else {
-          doctor.bio = "There is no data in the database.";
-        }
-        if (doctor.address != undefined) {
-          doctor.address = doctor.address;
-        } else {
-          doctor.address = "There is no address in the database.";
+          doctor.bio = "There is no bio in the database.";
         }
         });
         if (doctors.length === 0) {
@@ -35,7 +30,7 @@ Doctor.prototype.getDoctors = function(medicalIssue) {
         } else {
         doctors.forEach(function(doctor) {
           $('#doctorList').append(
-            "<div class='info'><h3>" + doctor.first + " " + doctor.last + ", " +doctor.title + "</h3><p>" + doctor.address + "</p><p>" + doctor.bio + "</p><hr></div>"
+            "<div class='info'><h3>" + doctor.first + " " + doctor.last + ", " +doctor.title + "</h3><p class='gender'>" + doctor.gender + "</p><p>" + doctor.bio + "</p><hr></div>"
           );
         });
       }
