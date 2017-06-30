@@ -26,6 +26,10 @@ To download and run this project:
 4. Run {$ gulp build} and then {$ gulp serve} to view the project in a web browser via a localhost.
 
 
+## GH-Pages
+
+https://github.com/AnabelGR/better-doctor/tree/gh-pages
+
 ## Support and contact details
 
 If you have any issues or have questions, ideas, concerns, or contributions please contact the contributor through Github.
