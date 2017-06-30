@@ -1,10 +1,10 @@
 var Doctor = require('./../js/doctor.js').doctorModule;
 
 $(document).ready(function() {
-  var currentDoctorObject = new Doctor();
+  var currentDoctor = new Doctor();
   $('#submitbtn').click(function() {
-    var doctor = $('#symptom').val();
-    $('#symptom').val("");
-    currentDoctorObject.getDoctors(doctor);
+    var medicalIssue = $('#medicalIssue').val();
+    $('#medicalIssue').val("");
+    currentDoctor.getDoctors(medicalIssue);
   });
 });
