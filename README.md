@@ -6,7 +6,7 @@
 
 ## Description
 
-This web application will allow a user to call upon an API for (project aim goes here example: search a film API for information about a film).
+This web application will allow a user to call upon the Better Doctor API for information about area doctors.
 
 |Behavior| Input (User Action/Selection) |Output|
 |---|:---:|:---:|
