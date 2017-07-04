@@ -18,3 +18,17 @@ $(document).ready(function() {
     $('#search').show();
   });
 });
+
+  $('#doctorList').text("");
+
+  doctors.forEach(function(doctor) {
+    doctors = [];
+  if (doctors.length === 0) {
+    $('#doctorList').append("<p>Try different search criteria to widen your search.</p>");
+  } else {
+  doctors.forEach(function(doctor) {
+    $('#doctorList').append(
+      "<div class='info'><h3>" + doctor.first + " " + doctor.last + ", " + doctor.title + "</h3><p class='gender'>" + doctor.gender + "</p><p>" + doctor.bio + "</p><hr></div>"
+    );
+  });
+}
